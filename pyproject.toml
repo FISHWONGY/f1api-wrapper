@@ -1,0 +1,28 @@
+[project]
+name = "f1api-wrapper"
+version = "0.1.0"
+description = "F1 API Wrapper"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "loguru>=0.7.2",
+    "requests>=2.32.3",
+    "lxml>=5.3.0",
+    "cssselect>=1.2.0",
+    "pydantic>=2.4.2",
+    "pydantic-settings>=2.0.3",
+    "google-cloud-secret-manager>=2.16.3",
+    "google-cloud-logging>=3.8.0",
+    "google-cloud-storage>=2.10.0",
+    "protobuf==4.25.3",
+    "fastapi>=0.104.1",
+    "slowapi>=0.1.9",
+    "uvicorn>=0.24.0.post1",
+    "bcrypt>=4.0.1",
+    "python-jose>=3.3.0",
+    "passlib>=1.7.4",
+    "python-multipart>=0.0.17",
+    "SQLAlchemy>=2.0.36",
+    "pg8000>=1.31.2",
+    "psycopg2-binary>=2.9.10",
+]

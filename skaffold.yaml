@@ -1,0 +1,20 @@
+apiVersion: skaffold/v4beta2
+kind: Config
+metadata:
+  name: fastapi-wrapper-app
+build:
+  artifacts:
+  - image: us-central1-docker.pkg.dev/gcp-prj-123/gcp-app/fastapi-wrapper-app
+    docker:
+      dockerfile: Dockerfile
+    platforms:
+      - "linux/amd64"
+profiles:
+- name: production
+  manifests:
+    rawYaml:
+    - deploy/production/service.yaml
+deploy:
+  cloudrun:
+    projectid: gcp-prj-123
+    region: us-central1
